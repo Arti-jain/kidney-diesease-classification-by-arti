@@ -1,2 +1,130 @@
 [2025-07-24 14:51:18,027: INFO: main: Welcome to our custom log]
 [2025-07-24 14:52:48,290: INFO: main: Welcome to our custom log]
+[2025-07-25 17:35:01,926: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-25 17:35:01,955: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-25 17:35:01,957: INFO: common: created directory at: artifacts]
+[2025-07-25 17:35:01,960: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-25 17:35:01,963: INFO: 2627209363: Downloading data from https://drive.google.com/file/d/1BRjYq_S8XggMJGUN5msC6J3Sskhp8deE/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-07-25 17:47:14,789: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-25 17:47:14,841: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-25 17:47:14,849: INFO: common: created directory at: artifacts]
+[2025-07-25 17:47:14,858: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-25 17:47:14,867: INFO: 2627209363: Downloading data from https://drive.google.com/file/d/1BRjYq_S8XggMJGUN5msC6J3Sskhp8deE/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-07-26 00:14:18,276: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-26 00:14:18,316: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-26 00:14:18,320: INFO: common: created directory at: artifacts]
+[2025-07-26 00:14:18,322: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-26 00:14:18,324: INFO: 2627209363: Downloading data from https://drive.google.com/file/d/1BRjYq_S8XggMJGUN5msC6J3Sskhp8deE/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-07-26 00:18:35,169: INFO: 2627209363: Downloaded data from https://drive.google.com/file/d/1BRjYq_S8XggMJGUN5msC6J3Sskhp8deE/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-07-26 15:40:02,763: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-07-26 15:40:02,809: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-26 15:40:02,831: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-26 15:40:02,831: INFO: common: created directory at: artifacts]
+[2025-07-26 15:40:02,831: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-26 15:40:02,832: ERROR: main: 'DataIngestionConfig' object has no attribute 'file_id']
+Traceback (most recent call last):
+  File "c:\kidney-diesease-classification-by-arti\main.py", line 33, in <module>
+    data_ingestion.main()
+  File "c:\kidney-diesease-classification-by-arti\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "c:\kidney-diesease-classification-by-arti\src\cnnClassifier\components\data_ingestion.py", line 27, in download_file
+    response = session.get(URL, params={'id': self.config.file_id}, stream=True)
+                                              ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataIngestionConfig' object has no attribute 'file_id'
+[2025-07-26 15:46:26,354: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-07-26 15:46:26,357: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-26 15:46:26,360: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-26 15:46:26,360: INFO: common: created directory at: artifacts]
+[2025-07-26 15:46:26,361: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-26 15:46:26,361: ERROR: main: 'DataIngestionConfig' object has no attribute 'file_id']
+Traceback (most recent call last):
+  File "c:\kidney-diesease-classification-by-arti\main.py", line 33, in <module>
+    data_ingestion.main()
+  File "c:\kidney-diesease-classification-by-arti\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "c:\kidney-diesease-classification-by-arti\src\cnnClassifier\components\data_ingestion.py", line 27, in download_file
+    response = session.get(URL, params={'id': self.config.file_id}, stream=True)
+                                              ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataIngestionConfig' object has no attribute 'file_id'
+[2025-07-26 15:48:20,261: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-07-26 15:48:20,263: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-26 15:48:20,265: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-26 15:48:20,266: INFO: common: created directory at: artifacts]
+[2025-07-26 15:48:20,266: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-26 15:48:20,266: ERROR: main: DataIngestionConfig.__init__() missing 1 required positional argument: 'file_id']
+Traceback (most recent call last):
+  File "c:\kidney-diesease-classification-by-arti\main.py", line 33, in <module>
+    data_ingestion.main()
+  File "c:\kidney-diesease-classification-by-arti\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 14, in main
+    data_ingestion_config = config.get_data_ingestion_config()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\kidney-diesease-classification-by-arti\src\cnnClassifier\config\configuration.py", line 24, in get_data_ingestion_config
+    data_ingestion_config = DataIngestionConfig(
+                            ^^^^^^^^^^^^^^^^^^^^
+TypeError: DataIngestionConfig.__init__() missing 1 required positional argument: 'file_id'
+[2025-07-26 23:09:35,263: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-07-26 23:09:35,288: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-26 23:09:35,308: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-26 23:09:35,309: INFO: common: created directory at: artifacts]
+[2025-07-26 23:09:35,309: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-26 23:09:37,097: ERROR: main: Downloaded file is not a valid zip file.]
+Traceback (most recent call last):
+  File "c:\kidney-diesease-classification-by-arti\main.py", line 33, in <module>
+    data_ingestion.main()
+  File "c:\kidney-diesease-classification-by-arti\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.extract_zip_file()
+  File "c:\kidney-diesease-classification-by-arti\src\cnnClassifier\components\data_ingestion.py", line 52, in extract_zip_file
+    raise ValueError("Downloaded file is not a valid zip file.")
+ValueError: Downloaded file is not a valid zip file.
+[2025-07-26 23:18:22,793: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-26 23:18:22,821: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-26 23:18:22,831: INFO: common: created directory at: artifacts]
+[2025-07-26 23:18:22,834: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-27 11:43:32,890: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-27 11:43:32,955: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-27 11:43:32,958: INFO: common: created directory at: artifacts]
+[2025-07-27 11:43:32,960: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-27 11:43:32,962: INFO: 2627209363: Downloading data from https://drive.google.com/file/d/1RZRXbb4ktjHiCXTaLj-skpBp2dyy7BVF/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-07-27 11:49:22,636: INFO: 2627209363: Downloaded data from https://drive.google.com/file/d/1RZRXbb4ktjHiCXTaLj-skpBp2dyy7BVF/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-07-27 12:42:56,770: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-07-27 12:42:56,774: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-27 12:42:56,786: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-27 12:42:56,786: INFO: common: created directory at: artifacts]
+[2025-07-27 12:42:56,787: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-27 12:42:56,787: ERROR: main: DataIngestionConfig.__init__() missing 1 required positional argument: 'file_id']
+Traceback (most recent call last):
+  File "c:\kidney-diesease-classification-by-arti\main.py", line 16, in <module>
+    data_ingestion.main()
+  File "C:\kidney-diesease-classification-by-arti\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 13, in main
+    data_ingestion_config = config.get_data_ingestion_config()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\kidney-diesease-classification-by-arti\src\cnnClassifier\config\configuration.py", line 24, in get_data_ingestion_config
+    data_ingestion_config = DataIngestionConfig(
+                            ^^^^^^^^^^^^^^^^^^^^
+TypeError: DataIngestionConfig.__init__() missing 1 required positional argument: 'file_id'
+[2025-07-27 12:46:47,508: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-07-27 12:46:47,511: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-27 12:46:47,512: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-27 12:46:47,513: INFO: common: created directory at: artifacts]
+[2025-07-27 12:46:47,514: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-27 12:46:47,514: ERROR: main: DataIngestionConfig.__init__() missing 1 required positional argument: 'file_id']
+Traceback (most recent call last):
+  File "c:\kidney-diesease-classification-by-arti\main.py", line 16, in <module>
+    data_ingestion.main()
+  File "C:\kidney-diesease-classification-by-arti\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 13, in main
+    data_ingestion_config = config.get_data_ingestion_config()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\kidney-diesease-classification-by-arti\src\cnnClassifier\config\configuration.py", line 24, in get_data_ingestion_config
+    data_ingestion_config = DataIngestionConfig(
+                            ^^^^^^^^^^^^^^^^^^^^
+TypeError: DataIngestionConfig.__init__() missing 1 required positional argument: 'file_id'
+[2025-07-27 13:03:30,105: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-07-27 13:03:30,481: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-27 13:03:30,485: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-27 13:03:30,486: INFO: common: created directory at: artifacts]
+[2025-07-27 13:03:30,487: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-27 13:03:30,487: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1RZRXbb4ktjHiCXTaLj-skpBp2dyy7BVF/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-07-27 13:08:20,549: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1RZRXbb4ktjHiCXTaLj-skpBp2dyy7BVF/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2025-07-27 13:08:37,126: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
